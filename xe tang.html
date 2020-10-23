@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>game xe tăng</title>
+  <script src="xa tang.js" src="vật cản.js"></script>
+</head>
+
+<body>
+  <h1 id="gameover"> </h1>
+  <button onclick="play()" id="play">Play</button>
+  <div id="battleFiled"
+    style="width: 190px; height: 190px; border: 1px solid black; background-image: url('hinh-anh-mau-den-full-hd.jpg');background-size: 100% 100%"
+    ; >
+    <div id="tank"
+      style="width: 19px; height: 19px; background-image: url('tank.png');background-size: 100% 100%;position: relative;"
+      ></div>
+    <div id="can1"
+      style="width: 19px; height: 19px; margin-top: 0px; margin-left: 19px; background-image: url('xe\ tang\ 2.jpg');background-size: 100% 100%;;">
+    </div>
+    
+    <div id="can2"
+      style="width: 19px; height: 19px; margin-top: -19px ;margin-left: 95px; background-image: url('xe\ tang\ 2.jpg');background-size: 100% 100%;;">
+    </div>
+   
+  </div>
+  <table>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="moveUp()" onchange="vuno()">⬆</button>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="moveLeft()" onchange="vuno()">⬅</button></td>
+      <td></td>
+      <td>
+        <button onclick="moveRight()" onchange="vuno()">➡</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button onclick="moveDown()" onchange="vuno()">⬇</button></td>
+      <td></td>
+      <td>Điểm:</td>
+      <td id='diem'>0</td>
+      
+      <td id="diemcao"></td>
+
+
+    </tr>
+  </table>
+  <script>
+    document.addEventListener("keydown", control);
+  </script>
+</body>
+
+</html>
